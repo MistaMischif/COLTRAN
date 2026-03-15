@@ -1,0 +1,11 @@
+{
+  "coltran": {
+    "label": "COLTRAN Studios",
+    "contentRoot": "content/coltran",
+    "publicDir": "content/coltran/public",
+    "draftDir": "content/coltran/draft",
+    "siteDir": "site/coltran",
+    "port": 4101,
+    "wsPort": 45101
+  }
+}

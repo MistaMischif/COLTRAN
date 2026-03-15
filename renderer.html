@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Studio Content Manager</title>
+    <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 16px;
+      background: #111;
+      color: #f5f5f5;
+    }
+    button {
+      padding: 10px 16px;
+      margin-right: 8px;
+      margin-top: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #log {
+      margin-top: 16px;
+      padding: 8px;
+      background: #222;
+      border-radius: 4px;
+      height: 180px;
+      overflow-y: auto;
+      font-size: 13px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+<h1>Studio Content Manager (MVP)</h1>
+<p>Brand: <strong>COLTRAN</strong> (hardcoded MVP)</p>
+<button id="buildPreviewBtn">Build & Start Preview</button>
+<button id="openPreviewBtn">Open Preview in Browser</button>
+
+<div id="log"></div>
+
+<script>
+    const logEl = document.getElementById('log');
+
+    function log(msg) {
+      const time = new Date().toISOString().split('T').split('.');
+      logEl.textContent += '[' + time + '] ' + msg + '\\n';
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    document.getElementById('buildPreviewBtn').onclick = async () => {
+      log('Building site and starting preview...');
+      const res = await window.studioApi.buildAndPreview();
+      if (res.ok) {
+        log('SUCCESS: ' + res.message);
+      } else {
+        log('ERROR: ' + res.message);
+      }
+    };
+
+    document.getElementById('openPreviewBtn').onclick = async () => {
+      log('Opening preview in browser...');
+      await window.studioApi.openPreview();
+    };
+  </script>
+</body>
+</html>
