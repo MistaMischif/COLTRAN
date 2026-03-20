@@ -27,7 +27,8 @@ section, summary, time, mark, audio, video {
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+    display: block;
+}
 
 body {
 	line-height: 1;
@@ -159,16 +160,20 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #fff;
-		font-weight: 800;
-		letter-spacing: 0.225em;
-		line-height: 1em;
-		margin: 0 0 1em 0;
-		text-transform: uppercase;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.225em;
+    line-height: 1em;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    text-transform: uppercase;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1775,14 +1780,15 @@ input, select, textarea {
 	}
 
 	header.major {
-		margin: 0 0 3.5em 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
 	}
 
 		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
-			border-bottom: solid 2px #fff;
-			display: inline-block;
-			padding-bottom: 1em;
-			position: relative;
+    border-bottom: 0 solid #fff;
+    display: inline-block;
+    position: relative;
 		}
 
 			header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
@@ -2788,7 +2794,10 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		padding: 6em 0 4em 0 ;
+    /* [disabled]padding-top: 6em; */
+    padding-right: 0;
+    padding-left: 0;
+    /* [disabled]padding-bottom: 4em; */
 	}
 
 		.wrapper > .inner {
@@ -2817,8 +2826,8 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
-			color: #c8ece9;
+    background-color: #000000;
+    color: #c8ece9;
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -2846,11 +2855,13 @@ input, select, textarea {
 			}
 
 			.wrapper.style1 header.major h2, .wrapper.style1 header.major h3, .wrapper.style1 header.major h4, .wrapper.style1 header.major h5, .wrapper.style1 header.major h6 {
-				border-color: rgba(0, 0, 0, 0.125);
+    border-color: rgba(0, 0, 0, 0.125);
+    padding-top: 1px;
+    padding-bottom: 1px;
 			}
 
 			.wrapper.style1 header.major p {
-    color: #DB5E5E;
+    color: #FFFFFF;
 			}
 
 			.wrapper.style1 label {
