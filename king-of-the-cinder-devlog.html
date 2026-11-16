@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>King of the Cinder — Development Log | COLTRAN Studios</title>
+<meta name="description" content="Building King of the Cinder in UEFN: a human-directed, AI-assisted journey through vehicle combat, the Killing Fields and the Power Tower.">
+<link rel="canonical" href="https://coltranstudios.com/king-of-the-cinder-devlog.html">
+<link rel="icon" href="/images/favicon.png">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+body{background:#171e29;color:#edf2f6} .log-nav{display:flex;justify-content:space-between;gap:1rem;padding:1.4rem max(5vw,1rem);border-bottom:1px solid #ffffff24}.log-nav a{border:0;font-weight:700}.log-hero,.log-body{width:min(960px,90%);margin:auto}.log-hero{padding:5rem 0 3rem}.eyebrow{color:#6ee1e8;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase}.log-hero h1{font-size:clamp(2.2rem,6vw,4.6rem);line-height:1.08;letter-spacing:.02em;margin:.5em 0}.lead{font-size:1.2rem;max-width:720px;color:#c8d3de}.island{display:inline-block;padding:.8rem 1.2rem;border:1px solid #6ee1e8;color:#6ee1e8;border-radius:4px}.log-body{padding-bottom:4rem}.log-body section{padding:2.4rem 0;border-top:1px solid #ffffff24}.log-body h2{font-size:1.35rem;letter-spacing:.06em}.log-body h3{font-size:1rem;color:#6ee1e8;letter-spacing:.04em}.log-body p,.log-body li{color:#d1dae3;line-height:1.85}.log-body ul{padding-left:1.4rem}.log-meta{font-size:.85rem;color:#adbcca}.status{border-left:3px solid #ffbc73;padding:.3rem 0 .3rem 1.3rem}.log-footer{padding:2rem 5vw;text-align:center;border-top:1px solid #ffffff24;font-size:.8rem}a:focus-visible{outline:3px solid #6ee1e8;outline-offset:5px} @media(max-width:520px){.log-nav{font-size:.8rem}.log-hero{padding-top:3rem}.log-body section{padding:1.8rem 0}}
+</style>
+</head>
+<body>
+<nav class="log-nav" aria-label="Studio navigation"><a href="index.html">COLTRAN Studios</a><a href="games.html">All games ↗</a></nav>
+<main>
+<header class="log-hero">
+<p class="eyebrow">Development log · UEFN · Director’s Cut</p>
+<h1>King of<br>the Cinder</h1>
+<p class="lead">Race the canyon. Survive the Killing Fields. Claim the tower. Three acts, one continuous battle.</p>
+<p class="island">Fortnite island code: <strong>7230-6949-1801</strong></p>
+<p class="log-meta">By COLTRAN Studios · Compiled November 15, 2026</p>
+</header>
+<div class="log-body">
+<section id="vision"><h2>The director’s cut</h2>
+<p>We interpreted “Director’s Cut” as giving the creator the final say over a game idea that hadn’t yet been built. The founder’s vision was a battle royale that changes its movement and combat across three connected acts: a vehicle-combat race through a canyon, an on-foot crossing of the Killing Fields, and a vertical fight to claim the Power Tower.</p>
+<p>The theme influenced both pacing and production. Players leave their cars without ending the match. The distant tower gives the journey a destination. During development, the human creator directed the design and tested the results, while AI agents helped implement and revise it. We cut back an elaborate garage to protect the driving-and-shooting core and make the complete journey playable.</p>
+<p>The target is 64 players competing in one shared themed slice per match. Additional slices and randomized courses remain part of the larger vision, not a claim of completed content.</p></section>
+<section id="vehicle"><p class="eyebrow">Iteration 01</p><h2>Prove the vehicle combat</h2>
+<p>The first requirement was specific: one player must steer and shoot from the driver’s position. We explored a sports car with custom driver firing, a tank, a motorcycle-based car body, and a boat with cosmetic wheels. Each exposed a different trade-off in handling, aiming or presentation.</p>
+<p>We returned to the original sports car. Repeated parked and moving target tests led to aiming that the creator confirmed matched the crosshair. A decorative cannon slid and flipped, so it was replaced with a native roof-mounted launcher attachment. The creator confirmed the mount stayed attached and both weapon modes fired.</p>
+<h3>Make every shot readable</h3><p>Custom blue rocket and tracer meshes made shots easier to follow. Blue rocket bursts and sharper machine-gun hit flashes added feedback at impact. The creator confirmed that the projectiles and effects were visible and aligned. Those are recorded playtest results, not a guarantee that every later revision has been retested.</p></section>
+<section id="world"><p class="eyebrow">Iteration 02</p><h2>Build the three-act route</h2>
+<ul><li><strong>Zone 1 — Canyon race:</strong> a main road, an off-road branch, checkpoint boosts and a chasm shortcut. Vehicle weapons and mods are collected while driving.</li><li><strong>Zone 2 — Nuke1 / the Killing Fields:</strong> a desert testing-site town with combat, obstacles, weapon supplies and vertical traversal toward the tower.</li><li><strong>Zone 3 — Power Tower:</strong> a neon landmark with stairs, grapple targets and elevated platforms, ending in uncontested summit defense.</li></ul>
+<p>The creator completed the route and reported that summit victory worked. Boost pads were revised to expire after four seconds without stacking or extending; that expiry was also confirmed in a playtest. Vehicle handling and overall race pacing remain tuning work.</p></section>
+<section id="cuts"><p class="eyebrow">Iteration 03</p><h2>What we changed—and what we cut</h2>
+<h3>A simpler start</h3><p>The staged, live-preview customization garage became slow and unreliable. Missing car previews and failed handoffs interrupted testing. We simplified the frontend to choosing one of three cars, confirming READY, and entering a flat starting grid. Weapons and mods move into the race as pickups.</p>
+<h3>Public camera compatibility</h3><p>A cockpit camera went through several positioning and stability revisions. Experimental camera APIs then blocked public publishing. The creator approved the standard third-person vehicle camera for the public release, preserving driving and weapon functionality.</p></section>
+<section id="updates"><p class="eyebrow">Latest build notes</p><h2>Pickups, replay and persistent clocks</h2>
+<h3>0.11.7 — Supplies and replay</h3><p>Added 27 native weapon spawners across nine exposed Zone 2 supply clusters, including rocket launchers and rifle, shotgun and sniper choices. Added 16 vehicle weapon crates across eight starting lanes. Recorded real driving pickup events for the rocket, machine gun and off-road tires.</p>
+<p>A private test verified that a Zone 1 timeout returned the player to car selection and started another race without reconnecting or reloading the world. Summit victory uses the same reset function, but that path was not separately reverified in this revision.</p>
+<h3>0.11.8 — Keep time visible</h3><p>Persistent UI replaced transient timing messages: Zone 1 has a two-minute deadline, Zone 2 has one minute from entry, and Zone 3 displays its existing 30-second summit-defense timer. The defense timer counts during uncontested control; there is no separate tower-climb deadline.</p>
+<p>Verse compilation passed, and the Zone 1 display was observed counting down in private play. The Zone 2 and Zone 3 display logic compiled but was not separately replayed in that verification pass.</p></section>
+<section id="release"><h2>Release checkpoint</h2><div class="status"><p><strong>Recorded November 15, 2026:</strong> Release 1 was publicly playable under island code <strong>7230-6949-1801</strong>. The 0.11.8 update was submitted for automatic publication after Epic review; its last recorded state was pending / processing.</p></div>
+<p>The update passed Creator Portal validation: 2.24 MiB download, 117.91 MiB against a 300 MiB memory limit, no reported asset issues, and completed Verse compatibility checks. Memory validation is not an FPS benchmark.</p>
+<p>This is a dated development record, not a live release-status feed. Search the island code inside Fortnite to find the currently published version.</p></section>
+<section id="tools"><h2>Tools and human direction</h2><p>Built with Unreal Editor for Fortnite, Verse, Fortnite Creative devices and standard Epic assets, UEFN Scene Graph and asset reflection, editor MCP tools, Python and PowerShell scripts, Fortnite private sessions, and Epic Creator Portal. The blue rocket and tracer geometry was generated procedurally in Python and imported into UEFN.</p>
+<p>OpenAI Codex/ChatGPT assisted with implementation, debugging, editor automation, procedural asset scripts, documentation and test coordination. The creator supplied the vision, made manual map edits and performed hands-on acceptance tests. OpenAI inference is not integrated into gameplay; enemies use Fortnite’s native AI. Historical model identifiers are not reliably recorded.</p>
+<p>No Hyper3D Rodin use is recorded. No RTX Mega Geometry, DLSS Frame Generation or Ray Reconstruction integration is claimed. Game VFX and engine graphics capabilities are not evidence of a verified RTX implementation.</p></section>
+<section id="next"><h2>What still needs proving</h2><p>Two-human countdown synchronization, vehicle combat and contested summit defense still need a verified multiplayer pass. The 64-player setting is a configured target, not a completed 64-human load test. Full-route timing, handling across hardware and later release approval require additional evidence.</p>
+<p class="log-meta">This retrospective was consolidated from versioned build notes, implementation artifacts and creator playtest reports. It distinguishes what was built, what was tested and what remains open.</p></section>
+</div></main>
+<footer class="log-footer">© COLTRAN Studios · <a href="games.html">Games</a> · Site styling based on <a href="https://html5up.net">HTML5 UP</a></footer>
+</body></html>
