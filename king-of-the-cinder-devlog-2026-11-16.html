@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>It Is Rough. It Is Real. It Is Fun. | King of the Cinder Dev Log</title>
+<meta name="description" content="After the jam: what King of the Cinder has proved, why finishing mattered, and the work ahead on co-op, reliability and Epic support.">
+<link rel="canonical" href="https://coltranstudios.com/king-of-the-cinder-devlog-2026-11-16.html">
+<link rel="icon" href="/images/favicon.png">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+body{background:#171e29;color:#edf2f6} .log-nav{display:flex;justify-content:space-between;gap:1rem;padding:1.4rem max(5vw,1rem);border-bottom:1px solid #ffffff24}.log-nav a{border:0;font-weight:700}.log-hero,.log-body{width:min(960px,90%);margin:auto}.log-hero{padding:5rem 0 3rem}.eyebrow{color:#6ee1e8;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase}.log-hero h1{font-size:clamp(2.2rem,6vw,4.6rem);line-height:1.08;letter-spacing:.02em;margin:.5em 0}.lead{font-size:1.2rem;max-width:720px;color:#c8d3de}.island{display:inline-block;padding:.8rem 1.2rem;border:1px solid #6ee1e8;color:#6ee1e8;border-radius:4px}.log-body{padding-bottom:4rem}.log-body section{padding:2.4rem 0;border-top:1px solid #ffffff24}.log-body h2{font-size:1.35rem;letter-spacing:.06em}.log-body h3{font-size:1rem;color:#6ee1e8;letter-spacing:.04em}.log-body p,.log-body li{color:#d1dae3;line-height:1.85}.log-body ul{padding-left:1.4rem}.log-meta{font-size:.85rem;color:#adbcca}.status{border-left:3px solid #ffbc73;padding:.3rem 0 .3rem 1.3rem}.log-footer{padding:2rem 5vw;text-align:center;border-top:1px solid #ffffff24;font-size:.8rem}a:focus-visible{outline:3px solid #6ee1e8;outline-offset:5px} @media(max-width:520px){.log-nav{font-size:.8rem}.log-hero{padding-top:3rem}.log-body section{padding:1.8rem 0}}
+figure{margin:2rem 0}figure img{display:block;width:100%;height:auto;border-radius:6px}figcaption{font-size:.85rem;color:#b3c1ce;margin:.7rem 0 0}.draft-notice{padding:1rem;background:#493722;border:1px solid #d5a05e}.post-links{display:flex;flex-wrap:wrap;gap:1rem}.post-links a{padding:.7rem 1rem;border:1px solid #6ee1e8;border-radius:4px}</style>
+</head>
+<body>
+<nav class="log-nav" aria-label="Studio navigation"><a href="index.html">COLTRAN Studios</a><a href="games.html">All games ↗</a></nav>
+<main>
+<header class="log-hero">
+<p class="eyebrow">King of the Cinder · Daily dev log · November 16, 2026</p>
+
+<h1>It is rough.<br>It is real.<br>It is fun.</h1>
+<p class="lead">Getting a game out into the world before it feels finished is uncomfortable. This time, it also gave us the reason to keep building.</p>
+<p class="log-meta">COLTRAN Studios · About 7 minutes to read</p>
+</header>
+<article class="log-body">
+<section><h2>The part we wanted to prove</h2>
+<p>King of the Cinder is nowhere near complete. We know that. We can see the rough edges in the environment, feel the places where the car needs more work, and point to systems that still need proper multiplayer testing. Putting it in front of people does not make those problems disappear.</p>
+<p>But there is a reason we are excited about pushing this build out: <strong>it is fun.</strong> That is the merit we wanted this first version to demonstrate. Under the unfinished presentation and the fixes still waiting, there is a game we want to keep playing—and a much bigger game we want to finish.</p>
+<p>The original idea survived the process. Race and shoot through a canyon. Leave the car and fight across the Killing Fields. Climb toward a tower that has been calling to you from the distance, then defend the summit. Three different kinds of pressure in one continuous match. We did not want to emerge with only a car demo or only a tower. We wanted to find out whether the whole journey had something.</p>
+<p>Our own playtests have given us that reason to continue. The next step is to find out how well the feeling holds up when more people play together, without someone standing beside them explaining what to do.</p>
+<figure><img src="images/king-of-the-cinder/canyon-development.png" width="768" height="768" alt="Work-in-progress canyon starting area with a road through a rock arch, orange checkpoint banners and movement pads"><figcaption>From the build archive: the canyon starting area taking shape in UEFN. This is an actual development capture, not a finished-game promotional render.</figcaption></figure>
+</section>
+<section><h2>Finishing was an achievement</h2>
+<p>The figures we were following during the jam were roughly <strong>10,500 people signed up</strong> and about <strong>2,700 games submitted</strong>. The <a href="https://itch.io/jam/2026-epic-ai-megajam">official jam page</a> now lists 2,784 entries. Signups count people and submissions can represent teams, so those numbers are not a person-by-person completion rate. They still give some sense of the scale of the event—and of how much work went into getting something across the line.</p>
+<p>We are proud to have finished our entry. That does not mean we think everyone who did not submit failed. Anyone who wrestled with a build, learned a tool, cut a feature or tried to turn an idea into something playable knows how much can happen before there is a link to share.</p>
+<p>It was tough. There were stretches where getting back into a working session felt like a milestone by itself. There were changes that looked useful on paper and made the actual experience worse. There were moments when the correct decision was to stop adding things and recover what had already worked.</p>
+<p>Submitting a playable version matters because it turns the conversation from what the game might be into something people can try. We can be proud of that without pretending the work is finished.</p>
+</section>
+<section><h2>The cuts that helped the game survive</h2>
+<p>Vehicle combat was the first big test. One person had to drive, aim and fire. We tried different bases and different approaches. The sports car, tank, motorcycle-based body and boat experiments each taught us something, but they also consumed time. Eventually we returned to the original sports car and concentrated on making its aiming agree with the shots.</p>
+<p>Then came the visual feedback: blue projectiles that could actually be seen, distinct rocket bursts and machine-gun hit effects, and a roof weapon that stayed on the car. Those details were not decorative extras. If you cannot read where a shot went, it is hard to trust the combat.</p>
+<p>The garage taught a different lesson. We wanted a big customization moment, but a slow frontend and a car that would not reliably appear were getting between the player and the game. We cut the selection flow down. Pick a car, get to the grid, collect weapons and mods during the race. The larger customization ambition can wait until the foundation deserves it.</p>
+<p>That is where “Director’s Cut” became practical. Directing meant choosing what to keep, recognizing what was not helping, and refusing to lose the central idea under a pile of features. AI helped with code and editor work, but it did not remove the need for those decisions—or for hands-on testing.</p>
+<figure><img src="images/king-of-the-cinder/wedge-development.png" width="1000" height="1000" loading="lazy" alt="Early canyon wedge blockout showing several winding roads among stylized rock spires"><figcaption>An earlier wedge blockout from development. Multiple avenues through the same landscape are part of the track vision; this image records an iteration, not a promise that every route is finished.</figcaption></figure>
+</section>
+<section><h2>Making “minimum viable” mean something</h2>
+<p>An MVP needs to be small enough to finish and reliable enough to judge. We have evidence that the core is enjoyable. Now we need to make it consistently accessible: join, choose a car, understand the start, race, fight, climb, finish and play again.</p>
+<p>The less time someone spends wondering why they spawned somewhere strange, where the next checkpoint is, or whether a reset worked, the more room there is for the actual game. Clear timers, readable routes, dependable pickups and a quick return to the starting line are part of the product, not cleanup to leave until the end.</p>
+<p>We are keeping the three-stage structure and the 64-player target. We are also keeping the distinction between a configured capacity and a proven result. We have not completed a full 64-human test, and we will not present that as done. The useful next milestone is a smaller session that behaves correctly for everyone, followed by broader testing with evidence behind it.</p>
+</section>
+<section><h2>Next: bring friends into the design</h2>
+<p>Co-op is a direction we want to explore next. The current design is competitive; joining the same party does not turn it into a cooperative game. We want playing together to become an intentional part of the experience, with rules that make sense across the drive, the foot section and the final defense.</p>
+<p>That starts with decisions, not a checkbox. What is shared? What happens when one teammate misses a gate? Who qualifies for the next stage? How does a team claim the summit? We need answers that preserve the urgency of the race while giving friends a reason to help one another. Those rules are not finalized yet.</p>
+<p>Before we promise that mode, we need to verify the basics with two real players: the same countdown, cars releasing together, shots and damage agreeing on both screens, contested control behaving correctly, and both players getting cleanly into the next race. Co-op should strengthen the game we have, not become another expensive detour around it.</p>
+<figure><img src="images/king-of-the-cinder/tower-development.png" width="1024" height="1024" loading="lazy" alt="Work-in-progress Power Tower rising above a built-up area, with staggered platforms and neon structural elements"><figcaption>The Power Tower during construction. Its job is to be both a distant destination and the final change in how the match plays.</figcaption></figure>
+</section>
+<section><h2>Next: earn Epic’s support</h2>
+<p>We want Epic Games to see what is here and help us take it further. That could mean useful technical feedback, visibility, or an opportunity to continue development. We do not have a support agreement, endorsement or funding commitment to announce. It is an ambition we intend to work toward.</p>
+<p>The strongest case we can make is a better game: a build that loads, a match that makes sense, footage that shows the fun honestly, and a development record that is clear about progress and problems. We want to show that this idea has a future beyond the jam, and that we understand the work needed to get there.</p>
+<p>That is why sharing the rough version is exciting. It is an invitation to play something early enough that feedback can still shape it. We are not asking people to imagine every missing feature into existence. We are asking them to try the core and tell us where it lands.</p>
+</section>
+<section><h2>Take a run. Tell us what matters.</h2>
+<p>Find <strong>King of the Cinder</strong> in Fortnite with island code <strong>7230-6949-1801</strong>. Published features may differ while updates move through review. If you try it, tell us where you got lost, which moment made you want another run, and what stopped the fun. Those are the things we need to hear.</p>
+<p>We got a playable version out. It was hard. We are proud of it. Now we want to make the next version worthy of the reason we kept pushing: there is something fun here.</p>
+<div class="post-links"><a href="https://mistamischif.itch.io/king-of-the-cinder">Visit the game on itch.io</a><a href="https://itch.io/jam/2026-epic-ai-megajam">Explore the Epic AI MegaJam</a><a href="king-of-the-cinder-devlog.html">Read the development record</a></div>
+<p class="log-meta">The signup estimate comes from the creator’s account of the event; the official entry count was checked on November 16. All three pictures are archived captures of the actual project at different development stages.</p>
+</section>
+</article></main>
+<footer class="log-footer">COLTRAN Studios · <a href="games.html">Games</a> · Site styling based on <a href="https://html5up.net">HTML5 UP</a></footer>
+</body></html>
