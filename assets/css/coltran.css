@@ -61,3 +61,6 @@ body.landing #footer,.wrapper.style4{background:#181818}
 
 #header.fml-header nav.studio-links{position:static;right:auto;top:auto;height:auto;line-height:1.5}
 @media(max-width:736px){.devlog-teaser>div{flex:1 1 calc(100% - 3rem)}.devlog-teaser .log-cta{flex-basis:100%}.devlog-teaser{gap:.75rem}}
+
+.journal-index{display:flex;gap:1rem;flex-wrap:wrap;padding:1.5rem 0}.journal-index a{padding:.65rem 1rem;border:1px solid #555;color:#f4dfaa}.journal-note{width:90%;max-width:1100px;margin:1.5rem auto 3rem;color:#ded7ca;font-size:.9rem}.journal-entry h2{max-width:850px;font-size:clamp(1.5rem,3vw,2.4rem);letter-spacing:.07em}.journal-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:3rem;align-items:start}.journal-layout figure{margin:0}.journal-layout img{display:block;width:100%;height:auto}.journal-layout .portrait-capture img{max-width:300px;margin:auto}.journal-copy p{margin:0 0 1.4rem;line-height:1.8}.journal-copy h3{margin-top:2rem;color:#f4dfaa}.journal-layout figcaption{line-height:1.6;border-left:2px solid #555;padding-left:1rem;margin-top:1rem}.journal-entry{scroll-margin-top:5rem}
+@media(max-width:736px){.journal-layout{grid-template-columns:1fr;gap:2rem}.journal-index{gap:.6rem}.journal-index a{font-size:.85rem}.journal-layout .portrait-capture img{max-width:240px}}
