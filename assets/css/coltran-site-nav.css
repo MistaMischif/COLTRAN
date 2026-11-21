@@ -36,3 +36,6 @@ body:has(> .coltran-site-nav) #header{position:relative;top:auto;z-index:auto}
 body:has(> .coltran-site-nav) #page-wrapper{padding-top:0}
 body:has(> .coltran-site-nav) #menu{top:3.5rem;height:calc(100% - 3.5rem)}
 @media(max-width:310px){body:has(> .coltran-site-nav) #menu{top:6.25rem;height:calc(100% - 6.25rem)}}
+
+/* Keep the island promotion notice readable beside each relevant CTA. */
+p.epic-promo-notice{max-width:65ch;margin:.65rem 0 .85rem;color:inherit;font:600 .95rem/1.45 system-ui,sans-serif;letter-spacing:normal;text-transform:none;overflow-wrap:break-word}
