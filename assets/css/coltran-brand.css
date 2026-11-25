@@ -1,0 +1,18 @@
+/* Mandatory COLTRAN identity. Values from the original coltran.css. */
+@font-face{font-family:Eurostile;src:url('../fonts/eurostile-regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Eurostile;src:url('../fonts/eurostile-bold.ttf') format('truetype');font-weight:700;font-display:swap}
+:root{--coltran-red:#8b0000;--coltran-gold:#f4dfaa;--coltran-black:#080808}
+body,body.studio-inner,input,select,textarea,button,body h1,body h2,body h3,body h4,body p,body a,body nav,body .eyebrow,body .epic-promo-notice{font-family:Eurostile,sans-serif!important}
+body,body.studio-inner,body.studio-inner #page-wrapper{background:var(--coltran-black)!important}
+body>nav.coltran-site-nav{background:var(--coltran-black);font-family:Eurostile,sans-serif!important;border-bottom:1px solid #f4dfaa50}
+body>nav.coltran-site-nav .coltran-site-nav__inner{min-height:94px}
+body>nav.coltran-site-nav .coltran-site-nav__brand img{display:block;width:230px;height:auto;max-height:76px;object-fit:contain}
+body>nav.coltran-site-nav a{color:var(--coltran-gold)}
+body .eyebrow,body.studio-inner .eyebrow,body.studio-inner .kicker,body.studio-inner .status-note{color:var(--coltran-gold)!important}
+body em,body.studio-inner .show-opening em{color:var(--coltran-gold)}
+.hero h1 em{color:var(--coltran-gold);-webkit-text-stroke:0}
+body .button,body .button.light,body.studio-inner .button,body.studio-inner .button.primary,body.studio-inner .btn,body.studio-inner .show-btn{background:var(--coltran-red)!important;color:var(--coltran-gold)!important;border:1px solid var(--coltran-gold)!important}
+body .button:hover,body .button.light:hover,body.studio-inner .button:hover,body.studio-inner .btn:hover{background:#650000!important}
+body .ticker{background:var(--coltran-red);color:var(--coltran-gold)}
+body .project-tabs button[aria-selected=true],body .text-link{border-color:var(--coltran-gold)}
+@media(max-width:600px){body>nav.coltran-site-nav .coltran-site-nav__inner{flex-wrap:wrap;justify-content:center;padding:10px 16px;gap:4px}body>nav.coltran-site-nav .coltran-site-nav__brand img{width:190px;max-height:65px}.coltran-site-nav__links{justify-content:center;width:100%}}
